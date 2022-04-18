@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -43,6 +44,13 @@
     <img class="mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Silahkan Login</h1>
     <?php
+
+    session_start();
+    if (isset($_SESSION['username'])) {
+      header('Location: pages/dashboard.php');
+    }
+
+
     if (isset($_POST['button_login'])) { 
       $loginSQL = "SELECT * FROM user
         WHERE username='". $_POST['username'] ."' AND password=MD5('". $_POST['password'] ."')";
@@ -62,6 +70,8 @@
       </div>
 
     <?php
+      $_SESSION['username'] = $_POST['username'];
+
       header('Location: pages/dashboard.php');  
       } else {
     ?>
