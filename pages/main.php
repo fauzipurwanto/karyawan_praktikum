@@ -13,6 +13,7 @@ if(isset($_POST['button_logout'])){
 
 <!doctype html>
 <html lang="en">
+    
   <?php include "components/head.php" ?>
  
   <body>
@@ -20,13 +21,14 @@ if(isset($_POST['button_logout'])){
   <?php include "components/header.php" ?>
     
 
-<div class="container-fluid">
+<div class="container-fluid"> 
   <div class="row">
 
     <?php include "components/nav.php" ?>
  
 
     <?php include "routes.php" ?>
+
   </div>
 </div>
 
