@@ -55,7 +55,13 @@
             </div>
             <div class="mb-3">
                 <label for="status_menikah" class="form-label">Status Menikah</label>
-                <input type="text" class="form-control" id="status_menikah" name="status_menikah">
+                <select class="form-select" aria-label="Default select example" name="status_menikah">
+                    <option selected>Pilih Status</option>
+                    <option value="Belum Menikah">Belum Menikah</option>
+                    <option value="Menikah Anak 0">Menikah Anak 0</option>
+                    <option value="Menikah Anak 1">Menikah Anak 1</option>
+                    <option value="Menikah Anak 2">Menikah Anak 2</option>
+                </select>
             </div>
             <button class="btn btn-success" type="submit" name="button_simpan"><span data-feather="database"></span> Simpan</button>
         </form>
