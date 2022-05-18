@@ -47,7 +47,7 @@
 
     session_start();
     if (isset($_SESSION['username'])) {
-      header('Location: pages/dashboard.php');
+      header('Location: pages/main.php');
     }
 
 
@@ -72,7 +72,7 @@
     <?php
       $_SESSION['username'] = $_POST['username'];
 
-      header('Location: pages/dashboard.php');  
+      header('Location: pages/main.php');  
       } else {
     ?>
     
