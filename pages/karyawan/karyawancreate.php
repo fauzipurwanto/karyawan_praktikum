@@ -2,11 +2,10 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Tambah Karyawan</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
+            <?php
+            include_once "../database/db.php";
 
-        <?php 
-            include_once "../database/database.php";
-
-            if(isset($_POST['button_simpan'])) {
+            if (isset($_POST['button_simpan'])) {
                 $nik = $_POST['nik'];
                 $nama_karyawan = $_POST['nama_karyawan'];
                 $jenis_kelamin = $_POST['jenis_kelamin'];
@@ -30,11 +29,10 @@
             }
 
             ?>
-
-            </div>
         </div>
-        <div>
-            <form action="" method="post">
+    </div>
+    <div>
+        <form action="" method="post">
             <div class="mb-3">
                 <label for="nik" class="form-label">Nomor Induk Karyawan</label>
                 <input type="text" class="form-control" id="nik" name="nik" required>
